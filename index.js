@@ -220,7 +220,7 @@ Practice accessing data above by console.log-ing following items:
 There is a typo in your dataset 😱 The 9th artist, Vincent Van Gogh is currently Vincent Van Dough. Fix this issue and console.log() to check your work. */
 
 
-// artists[8].name = "Vincent Van Gogh"
+artists[8].name = "Vincent Van Gogh"
 
 // console.log(artists[8].name)
 
@@ -263,18 +263,17 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 
 
-function get20s(array) {
-  const newArray = array.split("")
+function get20s(array){
+  const newArray = []
+  for (let i = 0; i < array.length; i++){
+    if (array[i].years > "1899" && array[i].years < "2001"){
+      newArray.push(array[i].name)
+    }
+  }
   return newArray
 }
- 
-// console.log(get20s(artists))
 
-// const newArray = "Hi how are you"
-// const splitArray = newArray.split("how are")
-// console.log(splitArray)
-
-
+console.log(get20s(artists))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -313,12 +312,20 @@ Use addArtist to do the following:
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
 
-function addArtist(array) {
-  array.push(20, "Nelson Slade", "1994", "Web Design", "American", "lorem ipsum");
+// function addArtist(array) {
+//   array.push(20, "Nelson Slade", "1994 - current day", "Web Design", "American", "lorem ipsum");
+//   return array
+// }
+
+// console.log(addArtist(artists))
+
+// OR????
+
+function addArtist(array, id, name, years, genre, nationality, bio) {
+  array.push(id, name, years, genre, nationality, bio);
   return array
 }
 
-// console.log(addArtist(artists))
 // console.log(addArtist(artists, 20, "Nelson Slade", "1994 - current day", "Web Design", "American", "lorem ipsum"))
 
 
@@ -340,7 +347,7 @@ function lotsOfArt(array) {
   return newArray
 }
 
-console.log(lotsOfArt(artists))
+// console.log(lotsOfArt(artists))
 
 /* ***** END OF TASKS ***** */
 
