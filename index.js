@@ -273,7 +273,7 @@ function get20s(array){
   return newArray
 }
 
-console.log(get20s(artists))
+// console.log(get20s(artists))
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
